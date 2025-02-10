@@ -7,12 +7,12 @@ interface User {
   email?: string
 }
 
-const unknownUser: User = {
+const unknownUser = {
   id: 1,
   email: "test@example.com"
 };
 
-const user = unknownUser;
+const user = unknownUser as User;
 
 console.log(user.email ?? "Email not available");
 // Expected Output: "test@example.com"
